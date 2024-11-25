@@ -1,9 +1,9 @@
 steps:
   - command: "install_bazel.sh"
     key: "install_bazel"
-#  - command: "bazel build //src:bazel-dev"
-#    key: "bazel_build"
-#    depends_on: "install_bazel"
+  - command: "bazel build //src:bazel-dev"
+    key: "bazel_build"
+    depends_on: "install_bazel"
 #    retry:
 #      automatic:
 #        - exit_status: "*"
