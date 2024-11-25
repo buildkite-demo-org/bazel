@@ -25,9 +25,8 @@ class ActionTempTest(test_base.TestBase):
     _invalidations = 0
 
     def flaky_test(self):
-        rand_float: float = random.uniform(0, 1)
-        print(f"### random float: {rand_float} ###")
-        self.assertTrue(rand_float > 0.1)
+        self.assertTrue(random.random() < 0.01)
+        self.assertTrue(False)
 
     def testActionTemp(self):
         self._CreateWorkspace()
