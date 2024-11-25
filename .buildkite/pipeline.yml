@@ -1,6 +1,5 @@
 steps:
-  - command: "install_bazel.sh"
-    key: "install_bazel"
-  - command: "bazel build //src:bazel-dev"
+  - command:
+      - "install_bazel.sh"
+      - "bazel build //src:bazel-dev"
     key: "bazel_build"
-    depends_on: "install_bazel"
