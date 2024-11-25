@@ -2,14 +2,14 @@ steps:
   - command: "install_bazel.sh"
     key: "install_bazel"
     branches: "testengine"
-  - command: "bazel build //src:bazel-dev"
-    key: "bazel_build"
-    branches: "testengine"
-    depends_on: "install_bazel"
+#  - command: "bazel build //src:bazel-dev"
+#    key: "bazel_build"
+#    branches: "testengine"
+#    depends_on: "install_bazel"
 #    retry:
 #      automatic:
 #        - exit_status: "*"
 #          limit: 4
   - command: "bazel test //src/test/py/bazel:action_temp_test"
     key: "bazel_test"
-    depends_on: "bazel_build"
+    depends_on: "install_bazel"
