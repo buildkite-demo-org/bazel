@@ -1,10 +1,10 @@
 steps:
   - command: "install_bazel.sh"
     key: "install_bazel"
-    branch: "testengine"
+    branches: "testengine"
   - command: "bazel build //src:bazel-dev"
     key: "bazel_build"
-    branch: "testengine"
+    branches: "testengine"
     depends_on: "install_bazel"
 #    retry:
 #      automatic:
