@@ -1,5 +1,5 @@
 steps:
-  - command: "bazel build //src:bazel-dev"
+  - command: "bazel build --check_direct_dependencies=off //src:bazel-dev"
     key: "bazel_build"
     retry:
       automatic:
